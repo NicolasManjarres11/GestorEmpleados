@@ -1,0 +1,14 @@
+En la carpeta bin, en el archivo www, está parametrizada la conexión al servidor. Se configuró para que el servidor cargara o ya sea en un puerto dado automáticamente o por el puerto 3030.
+
+Se crea carpeta config y dentro creamos el archivo database.js, para configurar la conexión a la base de datos, la cual está en línea
+
+Se crea carpeta models, donde estarán los modelos de tablas de la base de datos, se empezó con la tabla de empleados, creando un schema y exportando este mismo por medio de la función mongoose.model, para guardar la tabla empleados
+
+Se crea carpeta controllers, donde definiremos las funciones para enviar datos a la base de datos, ya sea para crear, guardar, modificar o eliminar algún datos
+
+Se crea archivo de empleados.router.js en routes, para definir la primera ruta del proyecto, la importamos en app.js y procedemos a realizar pruebas en postman
+
+en Postman, probamos con el metodo POST si se guardan los datos, colocando la ruta de empleados y en la parte de Body, colocando algunos datos de prueba como si estvieramos guardando algún empleado
+
+pagina 122/1000
+
