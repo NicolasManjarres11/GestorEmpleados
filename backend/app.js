@@ -5,9 +5,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var database = require('./config/database');
+var auth = require('./auth/main_auth');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+
 var empleadosRouter = require('./routes/empleados.router');
 
 var app = express();
@@ -23,10 +23,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 database.mongoConnect();
 
+
+app.use(auth)
+
 //Router
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/empleados', empleadosRouter);
 
 // catch 404 and forward to error handler

@@ -20,3 +20,13 @@ Luego hacemos la prueba de llamar un único dato, para eso creamos la funció fi
 Ahora se crea la función para actualizar datos, en este caso se llama el método findByIdAndUpdate, lo que hace es buscar por id y actualizar los datos del empleado que maneje ese ID, se agrega en las rutas con el método put, se prueba en postman, con el método put, en el link se coloca la dirección más el id, en el body colocamos los campos de la base de datos y los datos a actualizar
 
 Por último se crea la función de borrar que funciona prácticamente igual que la función de update, solo que remueve el dato según el id especificado
+
+Ahora se le agregará seguridad con Json web token
+
+Se crea el modelo de usuarios, donde los campos serán usuario y contraseña, luego creamos el controlador, pero antes, instalamos jsonwebtoken
+
+importamos el modelo de usuarios, importamos crypto para las funciones de hash y jwt para generación  y verificación de tokens, creamos la función login, donde primero creamos la variable hashedpass, en esta creamos el hash de la contraseña, hash es convertir en un registro de datos en valores alfanuméricos, luego definimos el método findone, donde buscará el usuario por req.body.usuario y el pass lobuscará con el hash creado y almacenado en la variable hashedpass, dentro de esta función, creamos un objeto de respuesta, donde tendrá un campo de token el cual estará nulo por defecto. Si no está null el usuario o más bien este si se encuentra en la base de datos, el jwt asignará un token, donde incluirá el id del usuario y el nombre
+
+creamos carpeta auth, donde creamos el achivo de autenticación principal main_auth.js. En este archivo, extraemos y verificamos el token, lo dividimos para extraerlo, lo verificamos con jwt.verify junto con el secreto recret, si la verificación es exitosa, se guardará dicho token o valor en la variable decoded, si falla, devolvemos el codigo de error http 401 por falta de credenciales validas para autenticarse en el recurso solicitado
+
+Probando en postman, ya nos devuelve el mensaje diciendo que no tenemos los permisos requeridos, por lo cual, en mongo creamos una colección llamada usuarios, colocando los campos usuario y pass. 
