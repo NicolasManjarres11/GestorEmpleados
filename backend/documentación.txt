@@ -10,5 +10,13 @@ Se crea archivo de empleados.router.js en routes, para definir la primera ruta d
 
 en Postman, probamos con el metodo POST si se guardan los datos, colocando la ruta de empleados y en la parte de Body, colocando algunos datos de prueba como si estvieramos guardando algún empleado
 
-pagina 122/1000
+Luego de las pruebas, vamos a crear otras funciones dentro del controller, las cuales son buscar en general y buscar un único dato. En las rutas definimos primero el método a utilizar (POST, GET, UPDATE, DELETE), luego aclaramos en qué ruta se hará y por último llamamos la función a utilizar
 
+Hacemos prueba en postman, colocando la dirección del servidor con la ruta de empleados, seleccionamos el método GET, envíamos la petición y nos traerá en JSON la información solicitada, en este caso, los datos de la tabla empleados. Esto con el método find
+
+Luego hacemos la prueba de llamar un único dato, para eso creamos la funció finOne, que utilizará el método con el mismo nombre sobre el modelo Empleado, aclaramos que se buscará por id y se aclara en las rutas
+
+
+Ahora se crea la función para actualizar datos, en este caso se llama el método findByIdAndUpdate, lo que hace es buscar por id y actualizar los datos del empleado que maneje ese ID, se agrega en las rutas con el método put, se prueba en postman, con el método put, en el link se coloca la dirección más el id, en el body colocamos los campos de la base de datos y los datos a actualizar
+
+Por último se crea la función de borrar que funciona prácticamente igual que la función de update, solo que remueve el dato según el id especificado
