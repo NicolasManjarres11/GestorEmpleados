@@ -1,6 +1,7 @@
 //lógica para verificar que el token cuenta con permisos
 
 const jwt = require('jsonwebtoken')
+const { request } = require('../app')
 
 const auth = (req, res, next) => {
     //extracción y verificación del token 

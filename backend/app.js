@@ -24,6 +24,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 database.mongoConnect();
 
+app.use ('/usuarios', usuariosRouter);
+
 
 app.use(auth)
 

@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken') //generació y verificación de tokens
 exports.login = (req, res, next) => {
 
     //contraseña hasheada
-    let hashedpass = crypto.createHash("sha512").update(req.params.pass).digest("hex"); //crea el hash de la contraseña proporcionada
+    let hashedpass = crypto.createHash("sha512").update(req.body.pass).digest("hex"); //crea el hash de la contraseña proporcionada
 
     Usuario.findOne({ usuario: req.body.usuario, pass: hashedpass}, function(err, usuario) {
         let response = {
