@@ -30,3 +30,6 @@ importamos el modelo de usuarios, importamos crypto para las funciones de hash y
 creamos carpeta auth, donde creamos el achivo de autenticación principal main_auth.js. En este archivo, extraemos y verificamos el token, lo dividimos para extraerlo, lo verificamos con jwt.verify junto con el secreto recret, si la verificación es exitosa, se guardará dicho token o valor en la variable decoded, si falla, devolvemos el codigo de error http 401 por falta de credenciales validas para autenticarse en el recurso solicitado
 
 Probando en postman, ya nos devuelve el mensaje diciendo que no tenemos los permisos requeridos, por lo cual, en mongo creamos una colección llamada usuarios, colocando los campos usuario y pass. 
+
+
+208 / 1000
