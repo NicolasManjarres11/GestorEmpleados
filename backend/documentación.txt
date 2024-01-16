@@ -31,5 +31,5 @@ creamos carpeta auth, donde creamos el achivo de autenticación principal main_a
 
 Probando en postman, ya nos devuelve el mensaje diciendo que no tenemos los permisos requeridos, por lo cual, en mongo creamos una colección llamada usuarios, colocando los campos usuario y pass. 
 
+Luego de las pruebas de autenticación, se procede a crear el front de la aplicación, para eso instalamos de manera global create-react-app, luego vamos al directorio raíz de nuestro proyecto y creamos la carpeta del frontend con el siguiente comando por CMD "create-react-app nombre-carpeta"
 
-208 / 1000
