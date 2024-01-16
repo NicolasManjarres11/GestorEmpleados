@@ -33,3 +33,20 @@ Probando en postman, ya nos devuelve el mensaje diciendo que no tenemos los perm
 
 Luego de las pruebas de autenticación, se procede a crear el front de la aplicación, para eso instalamos de manera global create-react-app, luego vamos al directorio raíz de nuestro proyecto y creamos la carpeta del frontend con el siguiente comando por CMD "create-react-app nombre-carpeta"
 
+
+Se crea componente login, se toma formulario de react bootstrap y se estiliza con los siguientes estilos
+
+sm="12"
+                                xs="12"
+                                md={{span: 4, offset: 4}}
+                                lg={{span: 4, offset: 4}}
+                                xl={{span: 4, offset: 4}}>
+
+                                Que estos son los tamaños que maneja bootstrap
+
+
+capturamos los datos por medio del evento onchange, donde si se evidencia un cambio en el elemento, este enviara los datos o el estado al state (valga la redundancia)
+
+Luego se agrega evento onClick en el botón de iniciar sesión
+
+
