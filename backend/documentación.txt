@@ -57,3 +57,13 @@ Se estiliza navbar
 Ahora vamos a crear las rutas del front, se crea componente router con archivo router.js, en este definimos las rutas y los paths de nuestra página, empezando por colocar la ruta del login, el cual sería el path principal
 , se crea ruta de Home como ejemplo para proba y se define ruta que hace alusión a una ruta inexistente
 
+instalamos axios, que es una libreria que nos permite hacer solicitudes desde el navegador o node.js
+configuramos el boton de iniciar sesión con axios, donde configuramos que vamos a postear lo que se guarda en el estado del componente login, es decir, en los apartados de usuario y contraseña
+
+Luego instalamos cors en el backend que esta libreria nos permite recibir peticiones
+
+instalamos universal-cookies y util
+
+Se procede a configurar la funcion iniciarSesion para que al momento de iniciar sesión cree unas cookies las cuales nos va a dar un tiempo de sesión y una expiración de sesión
+
+492/1000

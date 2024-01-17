@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var database = require('./config/database');
 var auth = require('./auth/main_auth');
+var cors = require('cors')
 
 
 var empleadosRouter = require('./routes/empleados.router');
@@ -19,6 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(cors())
 
 //Conexión a Mongo
 
