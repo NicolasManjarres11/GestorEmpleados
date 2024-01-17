@@ -50,3 +50,10 @@ capturamos los datos por medio del evento onchange, donde si se evidencia un cam
 Luego se agrega evento onClick en el botón de iniciar sesión
 
 
+Se instala font awesome en el front
+
+Se estiliza navbar
+
+Ahora vamos a crear las rutas del front, se crea componente router con archivo router.js, en este definimos las rutas y los paths de nuestra página, empezando por colocar la ruta del login, el cual sería el path principal
+, se crea ruta de Home como ejemplo para proba y se define ruta que hace alusión a una ruta inexistente
+
