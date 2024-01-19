@@ -8,6 +8,8 @@ import Cookies from 'universal-cookie';
 import { calculaExtracionSesion } from '../helper/helper';
 import Loading from '../loading/loading';
 
+
+
 const cookies = new Cookies();
 
 export default class Login extends React.Component {
@@ -29,13 +31,17 @@ export default class Login extends React.Component {
             pass: this.state.pass,
         })
         .then((response) => {
-            if( isNull(response.data.token)){
+
+            console.log('Respuesta de la API:', response.data);
+            if(response.data.token == null){
                 alert('Usuario y contraseña inválidos')
             } else {
                 cookies.set('_s', response.data.token, {
                     path: '/',
                     expires: calculaExtracionSesion()
-                })
+                });
+                console.log('Redirigiendo a /home');
+                this.props.history.push('/home')
             }
             this.setState({loading: false});
         })
