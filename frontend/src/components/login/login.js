@@ -40,7 +40,10 @@ export default class Login extends React.Component {
                     path: '/',
                     expires: calculaExtracionSesion()
                 });
+                console.log(response.data.token);
+
                 console.log('Redirigiendo a /home');
+                console.log(this.props.history);
                 this.props.history.push('/home')
             }
             this.setState({loading: false});
