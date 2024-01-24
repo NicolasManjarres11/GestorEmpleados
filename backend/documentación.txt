@@ -69,3 +69,10 @@ Se procede a configurar la funcion iniciarSesion para que al momento de iniciar 
 Ahora se agregaran rutas con autenticación
 
 Ahora vamos a mantener una sesión temporal mediante expiración de cookies
+
+se crea componente de empleados y se configura expiración de token, se hace conexión con tabla de empleados y se hace prueba con console.log trayendo los datos de la misma, prueba que culmina correctamente
+
+
+Ahora vamos a agregar tablas, para esto, instalamos react bootstrap table 2
+
+Se crea tabla, se agrega paginación y barra de búsqueda con ayuda de librerias de terceros
