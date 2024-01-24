@@ -32,7 +32,6 @@ export default class Login extends React.Component {
         })
         .then((response) => {
 
-            console.log('Respuesta de la API:', response.data);
             if(response.data.token == null){
                 alert('Usuario y contraseña inválidos')
             } else {
@@ -40,11 +39,7 @@ export default class Login extends React.Component {
                     path: '/',
                     expires: calculaExtracionSesion()
                 });
-                console.log(response.data.token);
-
-                console.log('Redirigiendo a /home');
-                console.log(this.props.history);
-                this.props.history.push('/home')
+                this.props.history.push('/empleados')
             }
             this.setState({loading: false});
         })
