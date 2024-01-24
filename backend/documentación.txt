@@ -76,3 +76,5 @@ se crea componente de empleados y se configura expiración de token, se hace con
 Ahora vamos a agregar tablas, para esto, instalamos react bootstrap table 2
 
 Se crea tabla, se agrega paginación y barra de búsqueda con ayuda de librerias de terceros
+
+658
