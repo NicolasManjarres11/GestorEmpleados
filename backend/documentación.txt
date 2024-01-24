@@ -77,4 +77,6 @@ Ahora vamos a agregar tablas, para esto, instalamos react bootstrap table 2
 
 Se crea tabla, se agrega paginación y barra de búsqueda con ayuda de librerias de terceros
 
-658
+ se crea componente grid, donde estará la lógica del request de datos de la BD, también está el código del front de la parte de empleados, todo queda exportado en el componente de buscar empleados, a excepción de la constante columnas, donde estará definido los campos de la base de datos y el nombre de la columna
+
+ 698
