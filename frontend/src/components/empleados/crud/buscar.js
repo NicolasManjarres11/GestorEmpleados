@@ -49,10 +49,14 @@ export default class EmmpleadosBuscar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
+
+        this.onClickEditButton = this.onClickEditButton.bind(this);
     }
 
-    componentDidMount() {
-        
+    componentDidMount() {}
+
+    onClickEditButton() {
+        this.props.changeTab('editar');
     }
 
     render() {
@@ -63,7 +67,11 @@ export default class EmmpleadosBuscar extends React.Component {
                     <h1 style={{ marginTop: '20px'}}>Buscar Empleados</h1>
                 </Row>
                 <Row>
-                    <DataGrid url="/empleados" columns={columns}/>
+                    <DataGrid 
+                        url="/empleados"
+                        columns={columns}
+                        showEditButton={true}
+                        onClickEditButton={this.onClickEditButton}/>
                 </Row>
             </Container>
         );

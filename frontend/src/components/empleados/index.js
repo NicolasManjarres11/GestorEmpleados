@@ -3,6 +3,7 @@ import { Container, Nav, Row } from 'react-bootstrap';
 import EmmpleadosBuscar from './crud/buscar';
 import EmpleadosCrear from './crud/crear';
 import './empleados.css'
+import EmpleadosEditar from './crud/editar';
 
 export default class Empleados extends React.Component {
     constructor(props) {
@@ -35,8 +36,13 @@ export default class Empleados extends React.Component {
                     </Nav>
                 </Row>
                 <Row>
-                    {this.state.currenTab === 'buscar' ? 
-                    (<EmmpleadosBuscar/>) : (<EmpleadosCrear changeTab={this.changeTab}/>)}
+                    {this.state.currenTab === 'buscar' ? (
+                    <EmmpleadosBuscar changeTab={this.changeTab}/>
+                    ) : this.state.currenTab === "crear" ? (
+                    <EmpleadosCrear changeTab={this.changeTab}/>
+                    ): (
+                        <EmpleadosEditar/>
+                    )}
                 </Row>
             </Container>
         );

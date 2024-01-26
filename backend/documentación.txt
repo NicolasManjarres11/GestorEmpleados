@@ -85,4 +85,4 @@ Se crea tabla, se agrega paginación y barra de búsqueda con ayuda de librerias
 
  Se agrega lógica en el componente de crear empleados, donde definimos los campos de la base de datos por labels, se encapsulan los datos con e.target.value y se guardan en el state, el cual enviará los datos a la base de datos
 
- 781
+ 873

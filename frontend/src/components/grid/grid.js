@@ -6,9 +6,13 @@ import paginationFactory, {
     SizePerPageDropdownStandalone
 } from 'react-bootstrap-table2-paginator';
 import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import { request } from '../helper/helper';
 import Loading from '../loading/loading';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import { isUndefined } from 'util';
 
 const { SearchBar } = Search;
 
@@ -18,7 +22,9 @@ export default class DataGrid extends React.Component {
         this.state = { 
             Loading: false,
             rows: [],
-         }
+         };
+         if (this.props.showEditButton && !this.existColumn('Editar'))
+            this.props.columns.push(this.gerEditButton())
     }
 
     componentDidMount() {
@@ -38,6 +44,25 @@ export default class DataGrid extends React.Component {
                 this.setState({loading: true});
                 console.error(err);
             });
+    }
+
+    existColumn(colText){
+        let col = this.props.columns.find((column) => column.text === colText)
+        return !isUndefined(col);
+    }
+
+    gerEditButton(){
+        return {
+            text: 'Editar',
+            formatter: (cell, row) =>{
+                /* console.log(row); */
+
+                return (
+                <Button onClick={() => this.props.onClickEditButton()}>
+                    <FontAwesomeIcon icon={faEdit}/>
+                </Button>);
+            }
+        }
     }
     
     render() { 
