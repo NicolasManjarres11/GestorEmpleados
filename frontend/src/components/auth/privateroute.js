@@ -19,11 +19,18 @@ export default class PrivateRoute extends React.Component {
     }
 
 
-    componentDidMount() {
+/*     componentDidMount() {
         this.setState({
             auth: checkAuth() && !this.state.auth,
         });
+    } */
+
+    componentWillMount() {
+        this.setState({
+            auth: checkAuth() && !this.state.auth,
+        })
     }
+    
 
 
     render() {
@@ -38,7 +45,7 @@ export default class PrivateRoute extends React.Component {
                     ) : (
                         <Redirect
                             to={{
-                                pathname: '/empleados', state:
+                                pathname: '/login', state:
                                     { from: this.props.location }
                             }}
                         />

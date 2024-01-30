@@ -38,8 +38,9 @@ export default class Login extends React.Component {
                 cookies.set('_s', response.data.token, {
                     path: '/',
                     expires: calculaExtracionSesion()
-                });
-                this.props.history.push('/empleados')
+                })
+                this.props.history.push('/empleados');
+                
             }
             this.setState({loading: false});
         })

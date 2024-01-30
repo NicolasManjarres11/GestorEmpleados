@@ -10,7 +10,7 @@ import { Row, Col, Button } from 'react-bootstrap';
 import { request } from '../helper/helper';
 import Loading from '../loading/loading';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faTrash, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { isUndefined } from 'util';
 
@@ -25,6 +25,9 @@ export default class DataGrid extends React.Component {
          };
          if (this.props.showEditButton && !this.existColumn('Editar'))
             this.props.columns.push(this.gerEditButton())
+
+        if (this.props.showDeleteButton && !this.existColumn('Eliminar'))
+            this.props.columns.push(this.getDeleteButton())
     }
 
     componentDidMount() {
@@ -61,6 +64,19 @@ export default class DataGrid extends React.Component {
                 <Button onClick={() => this.props.onClickEditButton(row)}>
                     <FontAwesomeIcon icon={faEdit}/>
                 </Button>);
+            }
+        }
+    }
+
+    getDeleteButton() {
+        return {
+            text: 'Eliminar',
+            formatter: (cell, row) => {
+                return (
+                    <Button onClick={() => this.props.onClickDeleteButton(row)}>
+                        <FontAwesomeIcon icon={faTrash}/>
+                    </Button>
+                )
             }
         }
     }
