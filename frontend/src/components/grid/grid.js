@@ -58,7 +58,7 @@ export default class DataGrid extends React.Component {
                 /* console.log(row); */
 
                 return (
-                <Button onClick={() => this.props.onClickEditButton()}>
+                <Button onClick={() => this.props.onClickEditButton(row)}>
                     <FontAwesomeIcon icon={faEdit}/>
                 </Button>);
             }

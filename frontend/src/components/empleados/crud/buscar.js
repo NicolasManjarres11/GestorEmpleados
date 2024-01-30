@@ -55,7 +55,8 @@ export default class EmmpleadosBuscar extends React.Component {
 
     componentDidMount() {}
 
-    onClickEditButton() {
+    onClickEditButton(row) {
+        this.props.setIdEmpleado(row._id);
         this.props.changeTab('editar');
     }
 

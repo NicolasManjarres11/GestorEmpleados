@@ -9,13 +9,24 @@ export default class Empleados extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            currenTab: "buscar"
+            currenTab: "buscar",
+            _id: null,
         };
         this.changeTab = this.changeTab.bind(this);
+        this.setIdEmpleado = this.setIdEmpleado.bind(this);
+        this.getIdEmpleado = this.getIdEmpleado.bind(this);
     }
 
     changeTab(tab){
         this.setState({currenTab: tab});
+    }
+
+    setIdEmpleado(id){
+        this.setState({_id: id});
+    }
+
+    getIdEmpleado(){
+        return this.state._id;
     }
 
     render() {
@@ -37,11 +48,16 @@ export default class Empleados extends React.Component {
                 </Row>
                 <Row>
                     {this.state.currenTab === 'buscar' ? (
-                    <EmmpleadosBuscar changeTab={this.changeTab}/>
+                    <EmmpleadosBuscar 
+                        changeTab={this.changeTab}
+                        setIdEmpleado={this.setIdEmpleado}/>
                     ) : this.state.currenTab === "crear" ? (
                     <EmpleadosCrear changeTab={this.changeTab}/>
                     ): (
-                        <EmpleadosEditar/>
+                        <EmpleadosEditar
+                            changeTab={this.changeTab}
+                            getIdEmpleado={this.getIdEmpleado}
+                        />
                     )}
                 </Row>
             </Container>
