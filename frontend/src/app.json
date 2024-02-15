@@ -1,3 +1,5 @@
 {
-    "APIHOST": "http://localhost:3030"
+    
+    "APIHOST": "https://movierentail.onrender.com"
 }
+
