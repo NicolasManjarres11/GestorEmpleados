@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/NicolasManjarres11/MovieRentail.git/static/css/main.8c60254a.chunk.css",
-    "main.js": "/NicolasManjarres11/MovieRentail.git/static/js/main.92b0258c.chunk.js",
-    "main.js.map": "/NicolasManjarres11/MovieRentail.git/static/js/main.92b0258c.chunk.js.map",
-    "runtime~main.js": "/NicolasManjarres11/MovieRentail.git/static/js/runtime~main.8b0884ea.js",
-    "runtime~main.js.map": "/NicolasManjarres11/MovieRentail.git/static/js/runtime~main.8b0884ea.js.map",
-    "static/css/2.016185da.chunk.css": "/NicolasManjarres11/MovieRentail.git/static/css/2.016185da.chunk.css",
-    "static/js/2.1d00cb1c.chunk.js": "/NicolasManjarres11/MovieRentail.git/static/js/2.1d00cb1c.chunk.js",
-    "static/js/2.1d00cb1c.chunk.js.map": "/NicolasManjarres11/MovieRentail.git/static/js/2.1d00cb1c.chunk.js.map",
-    "static/js/3.b42a410e.chunk.js": "/NicolasManjarres11/MovieRentail.git/static/js/3.b42a410e.chunk.js",
-    "static/js/3.b42a410e.chunk.js.map": "/NicolasManjarres11/MovieRentail.git/static/js/3.b42a410e.chunk.js.map",
-    "index.html": "/NicolasManjarres11/MovieRentail.git/index.html",
-    "precache-manifest.aaf2427e74bdb6a6fc6e005378a44014.js": "/NicolasManjarres11/MovieRentail.git/precache-manifest.aaf2427e74bdb6a6fc6e005378a44014.js",
-    "service-worker.js": "/NicolasManjarres11/MovieRentail.git/service-worker.js",
-    "static/css/2.016185da.chunk.css.map": "/NicolasManjarres11/MovieRentail.git/static/css/2.016185da.chunk.css.map",
-    "static/css/main.8c60254a.chunk.css.map": "/NicolasManjarres11/MovieRentail.git/static/css/main.8c60254a.chunk.css.map"
+    "main.css": "/NicolasManjarres11/MovieRentail/static/css/main.8c60254a.chunk.css",
+    "main.js": "/NicolasManjarres11/MovieRentail/static/js/main.92b0258c.chunk.js",
+    "main.js.map": "/NicolasManjarres11/MovieRentail/static/js/main.92b0258c.chunk.js.map",
+    "runtime~main.js": "/NicolasManjarres11/MovieRentail/static/js/runtime~main.66a84dc0.js",
+    "runtime~main.js.map": "/NicolasManjarres11/MovieRentail/static/js/runtime~main.66a84dc0.js.map",
+    "static/css/2.016185da.chunk.css": "/NicolasManjarres11/MovieRentail/static/css/2.016185da.chunk.css",
+    "static/js/2.9195df2f.chunk.js": "/NicolasManjarres11/MovieRentail/static/js/2.9195df2f.chunk.js",
+    "static/js/2.9195df2f.chunk.js.map": "/NicolasManjarres11/MovieRentail/static/js/2.9195df2f.chunk.js.map",
+    "static/js/3.b42a410e.chunk.js": "/NicolasManjarres11/MovieRentail/static/js/3.b42a410e.chunk.js",
+    "static/js/3.b42a410e.chunk.js.map": "/NicolasManjarres11/MovieRentail/static/js/3.b42a410e.chunk.js.map",
+    "index.html": "/NicolasManjarres11/MovieRentail/index.html",
+    "precache-manifest.c694b4f6343fe172fed3ef9f07780535.js": "/NicolasManjarres11/MovieRentail/precache-manifest.c694b4f6343fe172fed3ef9f07780535.js",
+    "service-worker.js": "/NicolasManjarres11/MovieRentail/service-worker.js",
+    "static/css/2.016185da.chunk.css.map": "/NicolasManjarres11/MovieRentail/static/css/2.016185da.chunk.css.map",
+    "static/css/main.8c60254a.chunk.css.map": "/NicolasManjarres11/MovieRentail/static/css/main.8c60254a.chunk.css.map"
   }
 }
